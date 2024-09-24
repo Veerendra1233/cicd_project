@@ -5,7 +5,7 @@
 
   <groupId>com.example.maven-project</groupId>
   <artifactId>maven-project</artifactId>
-  <packaging>pom</packaging>
+  <packaging>war</packaging> <!-- Changed to war -->
   <version>1.0-SNAPSHOT</version>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
@@ -71,6 +71,16 @@
               <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
           </reportPlugins>
+        </configuration>
+      </plugin>
+
+      <!-- Added the maven-war-plugin to generate a WAR file -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version> <!-- You can update this to a newer version if required -->
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml> <!-- For newer Servlet specs -->
         </configuration>
       </plugin>
     </plugins>
