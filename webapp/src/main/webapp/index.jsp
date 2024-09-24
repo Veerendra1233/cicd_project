@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>mobile offers website</title>
+    <title>Laptop offers website</title>
     <link rel="stylesheet" href="style.css">
 <style>
 	*{
