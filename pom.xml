@@ -5,70 +5,79 @@
 
   <groupId>com.example.maven-project</groupId>
   <artifactId>maven-project</artifactId>
-  <packaging>pom</packaging>
+  <!-- Update packaging type based on your project type (e.g., jar or war) -->
+  <packaging>jar</packaging> <!-- Change to war if this is a web project -->
   <version>1.0-SNAPSHOT</version>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
 
   <properties>
-    <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <build>
     <plugins>
+      <!-- Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version> <!-- Updated to a more recent version -->
+        <version>3.8.1</version>
         <configuration>
-          <source>17</source> <!-- Java 17 as source -->
-          <target>17</target> <!-- Java 17 as target -->
+          <source>17</source>
+          <target>17</target>
         </configuration>
       </plugin>
 
+      <!-- Release Plugin -->
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M1</version> <!-- Added version -->
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
 
+      <!-- Site Plugin -->
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
+        <version>3.9.1</version> <!-- Add version -->
         <configuration>
           <reportPlugins>
+            <!-- Report Plugins -->
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
+              <version>3.1.2</version> <!-- Add version -->
             </plugin>
-
             <plugin>
               <artifactId>maven-jxr-plugin</artifactId>
+              <version>3.2.0</version> <!-- Add version -->
             </plugin>
-
             <plugin>
               <artifactId>maven-javadoc-plugin</artifactId>
+              <version>3.3.1</version> <!-- Add version -->
             </plugin>
-
             <plugin>
               <artifactId>maven-pmd-plugin</artifactId>
+              <version>3.14.0</version> <!-- Add version -->
             </plugin>
-
             <plugin>
               <artifactId>maven-surefire-report-plugin</artifactId>
+              <version>2.22.2</version> <!-- Add version -->
             </plugin>
-
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
+              <version>3.0.5</version> <!-- Add version -->
             </plugin>
-
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>taglist-maven-plugin</artifactId>
+              <version>2.4</version> <!-- Add version -->
             </plugin>
           </reportPlugins>
         </configuration>
@@ -79,43 +88,39 @@
       <plugins>
         <plugin>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>2.8</version>
+          <version>3.1.2</version> <!-- Updated version -->
         </plugin>
-
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.1</version> <!-- Updated version of the maven-compiler-plugin -->
+          <version>3.8.1</version>
         </plugin>
-
-        <!-- Other plugins remain unchanged -->
       </plugins>
     </pluginManagement>
   </build>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>servlet-api</artifactId>
-        <version>2.5</version>
-      </dependency>
-
-      <dependency>
-        <groupId>javax.servlet.jsp</groupId>
-        <artifactId>jsp-api</artifactId>
-        <version>2.2</version>
-      </dependency>
-
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit-dep</artifactId>
-        <version>4.10</version>
-        <scope>test</scope>
-      </dependency>
-
-      <!-- Other dependencies remain unchanged -->
-    </dependencies>
-  </dependencyManagement>
+  <dependencies>
+    <!-- Dependency Management -->
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+          <version>2.5</version>
+        </dependency>
+        <dependency>
+          <groupId>javax.servlet.jsp</groupId>
+          <artifactId>jsp-api</artifactId>
+          <version>2.2</version>
+        </dependency>
+        <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit-dep</artifactId>
+          <version>4.10</version>
+          <scope>test</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+  </dependencies>
 
   <scm>
     <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
@@ -125,7 +130,7 @@
   </scm>
 
   <prerequisites>
-    <maven>3.0.3</maven>
+    <maven>3.8.1</maven> <!-- Update Maven prerequisite to your version -->
   </prerequisites>
 
-</project> 
+</project>
