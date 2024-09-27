@@ -99,7 +99,7 @@ h1{
             </ul>
 		
         </header>
-         <h1> **** We are going  work on maven, Nexus & Sonar on Monday **** </h1>   
+         <h1> **** This weekend we don't have a session **** </h1>   
 	 
 
     </section>    
