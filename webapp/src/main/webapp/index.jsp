@@ -99,7 +99,7 @@ h1{
             </ul>
 		
         </header>
-         <h1> **** Mobile offers availabile till OCT 30th **** </h1>   
+         <h1> **** We are going  work on maven, Nexus & Sonar on Monday **** </h1>   
 	 
 
     </section>    
