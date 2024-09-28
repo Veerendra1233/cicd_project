@@ -99,7 +99,7 @@ h1{
             </ul>
 		
         </header>
-         <h1> **** This weekend we don't have a session **** </h1>   
+         <h1> **** This is changed is updated in app **** </h1>   
 	 
 
     </section>    
